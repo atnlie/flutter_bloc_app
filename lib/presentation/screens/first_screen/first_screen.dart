@@ -37,7 +37,6 @@ class _FirstScreenState extends State<FirstScreen> {
       listener: (context, state) {
         if (state is InternetConnected && state.connectionType == ConnectionType.wifi) {
           context.bloc<CounterCubit>.increment();
-          context.
         } else if (state is InternetConnected && state.connectionType == ConnectionType.mobile) {
           context.bloc<CounterCubit>.decrement();
         }
