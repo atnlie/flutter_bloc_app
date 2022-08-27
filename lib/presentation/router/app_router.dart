@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'router_screen.dart';
 
 class AppRouter {
-  Route? OnGenerateRoute(RouteSettings settings) {
-    // final GlobalKey<ScaffoldState> key = settings.arguments;
-    print('settings -> $settings');
+  Route OnGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(

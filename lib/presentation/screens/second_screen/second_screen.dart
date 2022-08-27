@@ -8,13 +8,11 @@ class SecondScreen extends StatefulWidget {
   static const String routeName = '/secondScreen';
   final String title;
   final Color color;
-  // final GlobalKey<ScaffoldState>? homeScreenKey;
 
   const SecondScreen({
     Key? key,
     required this.title,
     required this.color,
-    // required this.homeScreenKey,
   }) : super(key: key);
 
   @override
