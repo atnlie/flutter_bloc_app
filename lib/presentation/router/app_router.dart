@@ -25,17 +25,16 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const ThirdScreen(
             title: 'Third Screen',
-            color: Colors.blueAccent,
+            color: Colors.deepPurpleAccent,
           ),
         );
       default:
-        // return MaterialPageRoute(
-        //   builder: (_) => const FirstScreen(
-        //     title: 'First Screen',
-        //     color: Colors.blueAccent,
-        //   ),
-        // );
-        return null;
+        return MaterialPageRoute(
+          builder: (_) => const FirstScreen(
+            title: 'First Screen',
+            color: Colors.greenAccent,
+          ),
+        );
     }
   }
 }

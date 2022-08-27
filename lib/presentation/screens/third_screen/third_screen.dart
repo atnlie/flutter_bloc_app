@@ -32,6 +32,7 @@ class _SecondScreenState extends State<ThirdScreen> {
         key: thirdScreenKey,
         appBar: AppBar(
           title: Text(widget.title),
+          backgroundColor: widget.color,
         ),
         body: Center(
           child: Column(
@@ -79,6 +80,7 @@ class _SecondScreenState extends State<ThirdScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               FloatingActionButton(
+                heroTag: 'ts_increment',
                 onPressed: () {
                   print('Increment');
                   BlocProvider.of<CounterCubit>(context).increment();
@@ -87,6 +89,7 @@ class _SecondScreenState extends State<ThirdScreen> {
                 child: const Icon(Icons.add),
               ),
               FloatingActionButton(
+                heroTag: 'ts_decrement',
                 onPressed: () {
                   print('Decrement');
                   BlocProvider.of<CounterCubit>(context).decrement();
@@ -95,6 +98,7 @@ class _SecondScreenState extends State<ThirdScreen> {
                 child: const Icon(Icons.remove),
               ),
               FloatingActionButton(
+                heroTag: 'ts_reset',
                 onPressed: () {
                   print('Reset');
                   BlocProvider.of<CounterCubit>(context).reset();

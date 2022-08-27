@@ -27,10 +27,11 @@ class BlocApp extends StatelessWidget {
         ),
         // home: const FirstScreen(color: Colors.yellowAccent, title: 'Home',),
         // initialRoute: '/firstScreen',
-        onGenerateRoute: (settings) {
-          _appRouter.OnGenerateRoute(settings);
-          return;
-        },
+        // onGenerateRoute: (settings) {
+        //   _appRouter.OnGenerateRoute(settings);
+        //   return;
+        // },
+        onGenerateRoute: (settings) => _appRouter.OnGenerateRoute(settings),
       ),
     );
   }

@@ -35,6 +35,7 @@ class _FirstScreenState extends State<FirstScreen> {
         key: firstScreenKey,
         appBar: AppBar(
           title: Text(widget.title),
+          backgroundColor: widget.color,
         ),
         body: Center(
           child: Column(
@@ -90,6 +91,7 @@ class _FirstScreenState extends State<FirstScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               FloatingActionButton(
+                heroTag: 'fs_increment',
                 onPressed: () {
                   print('Increment');
                   BlocProvider.of<CounterCubit>(context).increment();
@@ -98,6 +100,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 child: const Icon(Icons.add),
               ),
               FloatingActionButton(
+                heroTag: 'fs_decrement',
                 onPressed: () {
                   print('Decrement');
                   BlocProvider.of<CounterCubit>(context).decrement();
@@ -106,6 +109,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 child: const Icon(Icons.remove),
               ),
               FloatingActionButton(
+                heroTag: 'fs_reset',
                 onPressed: () {
                   print('Reset');
                   BlocProvider.of<CounterCubit>(context).reset();

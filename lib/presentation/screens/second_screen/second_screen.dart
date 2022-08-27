@@ -35,6 +35,7 @@ class _SecondScreenState extends State<SecondScreen> {
         key: secondScreenKey,
         appBar: AppBar(
           title: Text(widget.title),
+          backgroundColor: widget.color,
         ),
         body: Center(
           child: Column(
@@ -82,6 +83,7 @@ class _SecondScreenState extends State<SecondScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               FloatingActionButton(
+                heroTag: 'ss_increment',
                 onPressed: () {
                   print('Increment');
                   BlocProvider.of<CounterCubit>(context).increment();
@@ -90,6 +92,7 @@ class _SecondScreenState extends State<SecondScreen> {
                 child: const Icon(Icons.add),
               ),
               FloatingActionButton(
+                heroTag: 'ss_decrement',
                 onPressed: () {
                   print('Decrement');
                   BlocProvider.of<CounterCubit>(context).decrement();
@@ -98,6 +101,7 @@ class _SecondScreenState extends State<SecondScreen> {
                 child: const Icon(Icons.remove),
               ),
               FloatingActionButton(
+                heroTag: 'ss_reset',
                 onPressed: () {
                   print('Reset');
                   BlocProvider.of<CounterCubit>(context).reset();
